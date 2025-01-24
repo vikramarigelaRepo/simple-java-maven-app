@@ -17,8 +17,11 @@ pipeline {
             }
         }
         stage('Deliver') {
+            Dir("/var/jenkins_home/workspace/Github pipeline")
+            {
             steps {
                 sh './jenkins/scripts/deliver.sh'
+            }
             }
         }
     }
