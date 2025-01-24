@@ -18,9 +18,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-              dir("simple-java-maven-app"){
                 sh './jenkins/scripts/deliver.sh'
-              }
             }
         }
     }
