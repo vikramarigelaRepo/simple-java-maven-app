@@ -17,11 +17,10 @@ pipeline {
             }
         }
         stage('Deliver') {
-            dir("/var/jenkins_home/workspace/Github pipeline")
-            {
             steps {
+              dir("simple-java-maven-app"){
                 sh './jenkins/scripts/deliver.sh'
-            }
+              }
             }
         }
     }
